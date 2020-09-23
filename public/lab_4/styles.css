@@ -1,0 +1,23 @@
+body {
+    background: #a77bc4;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.flex-outer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-inner {
+    padding: 0 8px;
+    justify-content: space-between;
+}
