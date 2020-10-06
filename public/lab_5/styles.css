@@ -45,7 +45,7 @@ h1 {
 }
 
 .flex-inner li {
-    width: 100px;
+    max-width: 95px;
 }
 
 .flex-inner {
