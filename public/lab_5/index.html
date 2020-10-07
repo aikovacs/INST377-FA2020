@@ -56,12 +56,22 @@
                         </li>
                         <li>
                             <button type="submit">Submit Form</button>
-                            <button type="button">Activate</button>
+                            <button type="button" onclick="testFunction()">Activate</button>
                         </li>
                     </ul>
                 </form>
             </div>
         </div>
+
+        <script>
+        function testFunction() {
+                fetch('/api')
+                .then((response) => response.text())
+                .then((response) => {
+                    console.log(response);
+                })
+            }
+        </script>
     </body>
 
 </html>
