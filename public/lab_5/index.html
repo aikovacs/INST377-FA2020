@@ -69,6 +69,9 @@
                 let title = document.querySelector('title');
                 const newcolor = 'rgb(179, 16, 57)';
                 const flouter = document.querySelector('.flex-outer');
+                let checklabel = document.querySelector('.checkbox-list-label');
+                const elements = document.querySelectorAll('.flex-inner li label');
+                const fruits = ['peach', 'mango', 'orange'];
 
                 fetch('/api')
                 .then((response) => response.text())
@@ -79,6 +82,13 @@
 
                 document.body.style.backgroundColor = newcolor;
                 flouter.style.margin = "0 auto;";
+                checklabel.textContent = 'Fruits';
+
+                elements.forEach((el, i) => {
+                    const text = el.innerText;
+                    console.log(text);
+                    el.innerText = fruits[i];
+                })
             }
         </script>
     </body>
