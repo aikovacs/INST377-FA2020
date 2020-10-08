@@ -64,11 +64,15 @@
         </div>
 
         <script>
-        function testFunction() {
+            
+            function testFunction() {
+                let head = document.querySelector('header');
+                let title = document.querySelector('title');
                 fetch('/api')
                 .then((response) => response.text())
                 .then((response) => {
                     console.log(response);
+                    head.textContent = title.textContent = response;
                 })
             }
         </script>
