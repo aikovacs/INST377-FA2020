@@ -48,6 +48,13 @@ document.body.addEventListener('submit', async (e) => {
       ol.className = 'flex-inner';
       $('form').prepend(ol);
 
+      reversed.forEach((element, i) => {
+        const li = document.createElement('li');
+        $(li).append('<label for=$(element.code)>$(element.name)</label>');
+        $(li).append('<input type="checkbox" value=$(element.code) id=$(element.code) />');
+        $(ol).append(li);
+      });
+
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
