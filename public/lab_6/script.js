@@ -42,7 +42,8 @@ document.body.addEventListener('submit', async (e) => {
         return fromServer(indexer);
       });
 
-
+      const reversed = newArray2.sort((org, compare) => sortFunction(org, compare, 'name'));
+      
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
