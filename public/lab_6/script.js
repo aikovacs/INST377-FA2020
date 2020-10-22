@@ -8,10 +8,10 @@ function range(int) {
   return arr;
 }
 
-function sortFunction(a, b, key) {
-  if (a[key] < b[key]) {
+function sortFunction(org, compare, key) {
+  if (org[key] < compare[key]) {
     return -1;
-  } if (a[key] > b[key]) {
+  } if (org[key] > compare[key]) {
     return 1;
   }
   return 0;
@@ -35,6 +35,14 @@ document.body.addEventListener('submit', async (e) => {
         const max1 = Math.floor(max);
         return Math.floor(Math.random() * (max1 - min1) + min1);
       }
+
+      const newArray = range(10);
+      const newArray2 = newArray.map(() => {
+        const indexer = getRandomInt(0, 244)
+        return fromServer(indexer);
+      });
+
+
       console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
