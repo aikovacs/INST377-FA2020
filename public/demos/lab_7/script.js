@@ -9,7 +9,8 @@ function range(int) {
 function getRandomIntInclusive(min, max) {
   const min1 = Math.ceil(min);
   const max1 = Math.floor(max);
-  return Math.floor(Math.random() * (max1 - min1 + 1) + min1); // The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max1 - min1 + 1) + min1); 
+  // The maximum is inclusive and the minimum is inclusive
 }
 
 async function loadData() {
